@@ -1,0 +1,234 @@
+/* Goole Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+/* XEicon 2.3.3 CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Lora", serif;
+}
+a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.front {
+  background: url("images/image-01.png") no-repeat center center fixed;
+  background-size: cover;
+  z-index: 100;
+}
+.open-nav,
+.close-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 300;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #be0d13;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.open-nav {
+  left: 10px;
+}
+.open-nav.active {
+  left: -50px;
+}
+.close-nav {
+  right: -50px;
+}
+.close-nav.active {
+  right: 10px;
+}
+.front {
+  display: flex;
+  flex-direction: column;
+}
+.front header .inner {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+}
+.header-logo {
+  margin-right: 30px;
+  cursor: pointer;
+}
+.front header .gnb {
+  width: 700px;
+}
+.front header .gnb a {
+  position: relative;
+  display: block;
+  text-align: center;
+  float: left;
+  margin: 0 30px;
+  font-size: 16px;
+  line-height: 2.3em;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.front header .gnb a:before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 3px;
+  background-color: #d7d7d3;
+  transition: 0.35s;
+  z-index: -1;
+}
+.front header .gnb a:hover:before {
+  width: 100%;
+}
+.front header .gnb a:hover {
+  color: crimson;
+}
+.front-inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.front-left {
+  width: 900px;
+  color: #f1f1f1;
+  text-align: center;
+}
+.front-left h1 {
+  font-size: 50px;
+  color: #be0d13;
+}
+.front-left big {
+  color: #be0d13;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 21px;
+}
+.front-left big:last-child {
+  margin-top: 20px;
+}
+.front-left p {
+  font-family: "Noto Sans KR", sans-serif;
+  display: block;
+  font-weight: 200;
+  font-size: 14px;
+}
+.front-right {
+  width: 750px;
+  background: url(images/image-02.png) no-repeat center;
+  background-size: cover;
+}
+.front-right:hover .front {
+  background: url("");
+}
+.back {
+  background: url("images/image-03.png") no-repeat center center fixed;
+  background-size: cover;
+  z-index: 20;
+}
+.back-inner {
+  width: 1200px;
+  margin: auto;
+}
+.back-inner h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+  color: #be0d13;
+  text-align: center;
+}
+.back-actor {
+  width: 100%;
+  height: 460px;
+  display: flex;
+}
+.actor-content {
+  flex: 1;
+  margin: 0 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.actor-content:hover {
+  transform: scale(1.05);
+}
+.actor-content .profile {
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+  border: 5px solid rgba(66, 1, 1, 0.527);
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: 9;
+}
+.actor-content .profile:hover {
+  transform: scale(1.1);
+}
+.content-inner {
+  font-family: "Noto Sans KR", sans-serif;
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  color: #d3d3d3;
+  background-color: rgba(145, 3, 3, 0.438);
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+  z-index: -1;
+  overflow: hidden;
+}
+.content-inner img {
+  width: 100%;
+  height: 160px;
+}
+.content-inner h4 {
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.content-inner p {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.7em;
+  margin-bottom: 26px;
+}
+.content-inner a {
+  display: inline-block;
+  width: 80px;
+  margin: auto;
+  font-size: 12px;
+  line-height: 2.2em;
+  border-radius: 30px;
+  border: 2px solid #f1f1f1;
+  background-color: rgba(212, 2, 2, 0.438);
+  transition: 0.5s;
+}
+.content-inner a:hover {
+  border-color: transparent;
+  background-color: #171717;
+}
